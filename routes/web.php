@@ -34,3 +34,14 @@ Route::post('/bachelier/save', [App\Http\Controllers\BachelierController::class,
 Route::get('/demande', [App\Http\Controllers\DemandeController::class, 'index'])->name('demande.index');
 Route::get('/demande/cree', [App\Http\Controllers\DemandeController::class, 'create'])->name('demande.create');
 Route::post('/demande/save', [App\Http\Controllers\DemandeController::class, 'store'])->name('demande.register');
+
+
+// bachelier
+Route::get('/utilisateur', [App\Http\Controllers\UtilisateurController::class, 'index'])->name('utilisateur.index');
+Route::get('/utilisateur/cree', [App\Http\Controllers\UtilisateurController::class, 'create'])->name('utilisateur.create');
+Route::post('/utilisateur/save', [App\Http\Controllers\UtilisateurController::class, 'store'])->name('utilisateur.register');
+
+Route::get('/utilisateur/connexion', [App\Http\Controllers\UtilisateurController::class, 'createConnexion'])->name('utilisateur.connexion.create');
+Route::get('/utilisateur/connexion/{numeroCarteEtudiant}', [App\Http\Controllers\UtilisateurController::class, 'storeConnexion'])->name('utilisateur.connexion.store');
+
+
